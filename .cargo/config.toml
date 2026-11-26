@@ -1,0 +1,9 @@
+# Guest shim (guest/aosp14-shim): fully static aarch64 musl binary linked with the
+# rust-lld that ships with rustup toolchains - no cross gcc needed.
+[target.aarch64-unknown-linux-musl]
+linker = "rust-lld"
+
+# `cargo run` ad-hoc signs the host binary with the Virtualization.framework
+# entitlement first (an unsigned binary cannot start VMs).
+[target.aarch64-apple-darwin]
+runner = "scripts/codesign-run.sh"

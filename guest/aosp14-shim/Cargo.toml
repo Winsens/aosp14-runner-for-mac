@@ -1,0 +1,16 @@
+[package]
+name = "aosp14-shim"
+version = "0.1.0"
+edition = "2021"
+description = "Tiny static musl PID 1 wrapper that launches Cuttlefish secure_env inside the guest before exec'ing Android /init"
+publish = false
+
+[dependencies]
+libc = "0.2"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

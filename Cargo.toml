@@ -1,0 +1,15 @@
+[package]
+name = "aosp14-runner"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Native macOS Apple Silicon runner for unmodified AOSP 14 (aosp_cf_arm64_only_phone) images using Virtualization.framework"
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+crc32fast = "1.4"
+flate2 = "1.0"
+
+[build-dependencies]
+cc = "1.2"

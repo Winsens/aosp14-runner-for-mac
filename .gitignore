@@ -1,0 +1,11 @@
+/target/
+/workdir/
+/images/
+/assets/aosp14-shim
+/guest/aosp14-shim/target/
+.DS_Store
+*.img
+*.tar
+*.tar.gz
+/screen.png
+/screen.raw
